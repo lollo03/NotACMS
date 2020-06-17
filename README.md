@@ -5,6 +5,7 @@
 - Add the ability to change the password via the admin interface
 - Add the ability to manage galleries
 - Write a proper documentation
+- Add multi-language support, even if it is alredy possible (sort-off)
 # Quickstart
 Add this to the beginning of your file:
 ``` 
