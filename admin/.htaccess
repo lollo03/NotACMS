@@ -4,3 +4,6 @@
 <Files "contents.json">  
   Require all denied
 </Files>
+<Files "images.json">  
+  Require all denied
+</Files>

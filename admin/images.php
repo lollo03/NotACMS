@@ -9,7 +9,7 @@ if ($_SESSION['Active'] == false) { /* Redirects user to Login.php if not logged
 
 $strJsonFileContents = file_get_contents("db.json") or die("Fatal error, check db.json.");
 $db = json_decode($strJsonFileContents, true);
-$strJsonFileContents = file_get_contents("contents.json") or die("Fatal error, check contents.json! It must not be empty.");
+$strJsonFileContents = file_get_contents("images.json") or die("Fatal error, check images.json!");
 $contents = json_decode($strJsonFileContents, true);
 ?>
 
@@ -45,19 +45,52 @@ $contents = json_decode($strJsonFileContents, true);
     <div class="jumbotron">
       <h1><?php echo $db["customization"]["admin_title"] ?></h1>
       <p class="lead"><?php echo $db["customization"]["description"] ?></p>
+      <!DOCTYPE html>
+      <html>
+
+      <body>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          Select image to upload:
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <select id="name" name="name">
+            <?php 
+              foreach ($contents as $i => $i_value) {
+                echo '<option value="' . $i .'">' . $i .'</option>';
+              }
+            ?>
+          </select>
+          <input type="submit" value="Upload Image" name="submit">
+        </form>
+
+      </body>
+
+      </html>
     </div>
 
-    <form action="save.php" method="post">
+
+
+    <form action="delete.php" method="post">
       <?php
-      foreach($contents as $i => $i_value){
+      foreach ($contents as $i => $i_value) {
+        if($i_value == ""){
+          $str = "File not found. Please upload it.";
+        }else{
+          $str = "Show image";
+        }
         echo ('
         <div class="form-group">
-          <label>'.  $i .'</label>
-          <input name="'.  $i .' " type="text" class="form-control" value="' . $i_value . '">
+          <label>' .  $i . '</label> <a href="' . substr($i_value, 6) .'" target="_blank" >' . $str .'</a>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="' . $i . '">
+          <label class="form-check-label" for="defaultCheck1">
+            Delete
+          </label>
+        </div>
         </div>');
       }
       ?>
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-danger">Delete selected</button>
     </form>
 
 
