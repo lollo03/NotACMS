@@ -1,5 +1,5 @@
  This is not a CMS, it is something else.
- NotACMS is a simple solution to allow web developers to add simple management solution to their website with ease. It doesn't need a database, it doesn't need any skill, just paste a simple line of code in your webpage.
+ NotACMS is a ~~garbage~~ simple solution to allow web developers to add simple management solution to their website with ease. It doesn't need a database, it doesn't need any skill, just paste a simple line of code in your webpage.
  This project is based on bootstrap, PHP, and js.
 # TODO
 - [x] Add the ability to change the password via the admin interface
