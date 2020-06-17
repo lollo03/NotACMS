@@ -1,7 +1,19 @@
-# NotACMS
- This is not a CMS, is something else.
- NotACMS is simple solution to allow web web developer to add simple management solution to their website with ease.
+ This is not a CMS, it is something else.
+ NotACMS is a simple solution to allow web developers to add simple management solution to their website with ease. It doesn't need a database, it doesn't need any skill, just paste a simple line of code in your webpage.
+ This project is based on bootstrap, PHP, and js.
 # TODO
-- Add the ability to change te password via the admin interfece
+- Add the ability to change the password via the admin interface
 - Add the ability to manage galleries
 - Write a proper documentation
+# Quickstart
+Add this to the beginning of your file:
+``` 
+$strJsonFileContents = file_get_contents("admin/contents.json") or die("Fatal error, check contents.json! It must not be empty.");
+$contents = json_decode($strJsonFileContents, true); 
+```
+And this when you want to add some text:
+```
+<?php echo $contents["body"]?>
+```
+of course, change the `body` to the name of the element you want to change. You can see your elements in the `contents.json` file.
+Check the repo and it will become immediately clear!
