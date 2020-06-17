@@ -33,7 +33,8 @@ $contents = json_decode($strJsonFileContents, true);
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation" class="active"><a href="/">Home</a></li>
+          <li role="presentation" class="active"><a href="/admin/change.php">Change password</a></li>
           <li role="presentation"><a href="/admin/logout.php">Logout</a></li>
         </ul>
       </nav>
