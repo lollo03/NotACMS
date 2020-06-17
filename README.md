@@ -18,3 +18,5 @@ And this when you want to add some text:
 ```
 of course, change the `body` to the name of the element you want to change. You can see your elements in the `contents.json` file.
 Check the repo and it will become immediately clear!
+
+Note: all your page must be `.php`, otherwise this shit won't work
