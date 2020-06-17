@@ -1,0 +1,10 @@
+{
+    "credentials": {
+        "username": "admin",
+        "password": "$1$W5GcBTje$eWcXU2RhBvmAApu16Rc.C."
+    },
+    "customization": {
+        "admin_title": "Admin_title",
+        "description": "Customize this text in db.json"
+    }
+}
