@@ -22,7 +22,7 @@ $contents = json_decode($strJsonFileContents, true);
         <p class="lead"><?php echo $contents["intro"]?></p>
         <hr class="my-4">
         <p><?php echo $contents["body"]?></p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Documentation</a>
+        <a class="btn btn-primary btn-lg" href="https://github.com/lollo03/NotACMS" role="button">Documentation</a>
         <a class="btn btn-primary btn-lg" href="/admin/index.php" role="button">Admin page</a>
     </div>
 </body>
