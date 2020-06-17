@@ -2,11 +2,11 @@
  NotACMS is a simple solution to allow web developers to add simple management solution to their website with ease. It doesn't need a database, it doesn't need any skill, just paste a simple line of code in your webpage.
  This project is based on bootstrap, PHP, and js.
 # TODO
-- Add the ability to change the password via the admin interface
-- Add the ability to manage galleries
-- Write a proper documentation
-- Add multi-language support, even if it is alredy possible (sort-off)
-- Rewrite this thing... seriously, this thing is garbage, use just if you are lazy and you don't worry (too much) about security.
+- [x] Add the ability to change the password via the admin interface
+- [ ] Add the ability to manage galleries
+- [ ] Write a proper documentation
+- [ ] Add multi-language support, even if it is alredy possible (sort-off)
+- [ ] Rewrite this thing... seriously, this thing is garbage, use just if you are lazy and you don't worry (too much) about security.
 # Quickstart
 Add this to the beginning of your file:
 ``` 
@@ -22,4 +22,4 @@ Check the repo and it will become immediately clear!
 
 Note: all your page must be `.php`, otherwise this shit won't work
 
-The default login is admin:admin if you want to change the passowrd you have to maualy edit the `db.json` file. I will add the ability to use an UI, i promise.
+The default login is admin:admin if you want to change the passowrd you can do it from the GUI.
