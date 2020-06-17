@@ -3,6 +3,7 @@
  This project is based on bootstrap, PHP, and js.
 # TODO
 - [x] Add the ability to change the password via the admin interface
+- [X] Add the ability to manage images
 - [ ] Add the ability to manage galleries
 - [ ] Write a proper documentation
 - [ ] Add multi-language support, even if it is alredy possible (sort-off)
@@ -23,3 +24,18 @@ Check the repo and it will become immediately clear!
 Note: all your page must be `.php`, otherwise this shit won't work
 
 The default login is admin:admin if you want to change the passowrd you can do it from the GUI.
+
+# Images
+Add this to the beginning of your file:
+``` 
+$strJsonFileContents = file_get_contents("admin/images.json") or die("Fatal error, check images.json! It must not be empty.");
+$images = json_decode($strJsonFileContents, true); 
+```
+And this when you want to add some images:
+```
+<img src="<?php echo $images["test_image"]?>" alt="...">
+```
+of course, change the `test_images` to the name of the element you want to change. You can see your elements in the `images.json` file.
+Check the repo and it will become immediately clear!
+
+
