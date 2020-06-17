@@ -21,3 +21,5 @@ of course, change the `body` to the name of the element you want to change. You 
 Check the repo and it will become immediately clear!
 
 Note: all your page must be `.php`, otherwise this shit won't work
+
+The default login is admin:admin if you want to change the passowrd you have to maualy edit the `db.json` file. I will add the ability to use an UI, i promise.
