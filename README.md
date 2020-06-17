@@ -6,7 +6,7 @@
 - Add the ability to manage galleries
 - Write a proper documentation
 - Add multi-language support, even if it is alredy possible (sort-off)
-- Rewrite this thing (seriously, this thing is garbage, use just if you are lazy and you don't worry (too much) about security.
+- Rewrite this thing... seriously, this thing is garbage, use just if you are lazy and you don't worry (too much) about security.
 # Quickstart
 Add this to the beginning of your file:
 ``` 
