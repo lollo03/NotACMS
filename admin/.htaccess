@@ -1,0 +1,6 @@
+<Files "db.json">  
+  Require all denied
+</Files>
+<Files "contents.json">  
+  Require all denied
+</Files>
