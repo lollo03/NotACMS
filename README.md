@@ -4,6 +4,7 @@
 # TODO
 - [x] Add the ability to change the password via the admin interface
 - [X] Add the ability to manage images
+- [ ] Add the ability to differece the webiste pages in the admin page
 - [ ] Add the ability to manage galleries
 - [ ] Write a proper documentation
 - [ ] Add multi-language support, even if it is alredy possible (sort-off)
