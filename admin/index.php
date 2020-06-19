@@ -22,13 +22,20 @@ $contents = json_decode($strJsonFileContents, true);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <title><?php echo $db["customization"]["admin_title"] ?></title>
 </head>
 
 <body>
+
+  <script>
+    function auto_grow(element) {
+      element.style.height = "5px";
+      element.style.height = (element.scrollHeight) + "px";
+    }
+  </script>
+
   <div class="container">
     <div class="header clearfix">
       <nav>
@@ -49,11 +56,11 @@ $contents = json_decode($strJsonFileContents, true);
 
     <form action="save.php" method="post">
       <?php
-      foreach($contents as $i => $i_value){
+      foreach ($contents as $i => $i_value) {
         echo ('
         <div class="form-group">
-          <label>'.  $i .'</label>
-          <input name="'.  $i .' " type="text" class="form-control" value="' . $i_value . '">
+          <label>' .  $i . '</label>
+          <textarea oninput="auto_grow(this)" onclick="auto_grow(this)" name="' .  $i . ' " class="form-control">' . $i_value . '</textarea>
         </div>');
       }
       ?>
@@ -68,6 +75,7 @@ $contents = json_decode($strJsonFileContents, true);
     </footer>
 
   </div>
+
 </body>
 
 </html>
