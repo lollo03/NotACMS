@@ -59,9 +59,11 @@ $contents = json_decode($strJsonFileContents, true);
       foreach ($contents as $i => $i_value) {
         echo ('
         <div class="form-group">
-          <label>' .  $i . '</label>
-          <textarea oninput="auto_grow(this)" onclick="auto_grow(this)" name="' .  $i . ' " class="form-control">' . $i_value . '</textarea>
-        </div>');
+          <label>' .  $i_value["show_name"] . '</label>
+          <textarea oninput="auto_grow(this)" onclick="auto_grow(this)" name="' .  $i . ' " class="form-control">' . $i_value["text"]. '</textarea>
+          <p class="muted">' .  $i_value["note"] . '</p>
+        </div>
+        ');
       }
       ?>
       <button type="submit" class="btn btn-primary">Save</button>
