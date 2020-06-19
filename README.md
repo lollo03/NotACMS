@@ -16,7 +16,7 @@ $contents = json_decode($strJsonFileContents, true);
 ```
 And this when you want to add some text:
 ```
-<?php echo $contents["body"]?>
+<?php echo $contents["body"]["text"]?>
 ```
 of course, change the `body` to the name of the element you want to change. You can see your elements in the `contents.json` file.
 Check the repo and it will become immediately clear!
@@ -38,4 +38,34 @@ And this when you want to add some images:
 of course, change the `test_images` to the name of the element you want to change. You can see your elements in the `images.json` file.
 Check the repo and it will become immediately clear!
 
-
+# The contents.json file
+```
+{
+    "intro": {
+        "text": "Welcome to <strong>NotACMS<\/strong> the simple way to manage your custom-built site with ease.",
+        "show_name": "intro",
+        "note": "Intro text on the index.html page"
+    },
+    "body": {
+        "text": "Go check the documentation or log-in to the admin page to begin!",
+        "show_name": "body",
+        "note": "Body of the index.html page"
+    },
+    "title": {
+        "text": "NotACMS",
+        "show_name": "title",
+        "note": "Title of the index page"
+    }
+}
+```
+As you can see NotACMS offer the possibility  to give a note to each part of the website, and it can also display a different name for the customer.
+Example:
+```
+{
+    "long_shitty_name_with_underscores": {
+        "text": "The actual text you want to inser in the webpage",
+        "show_name": "Cool name without underscores",
+        "note": "Cool note to ease the customer life"
+    }
+}
+```
