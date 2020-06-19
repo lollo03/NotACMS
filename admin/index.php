@@ -40,10 +40,10 @@ $contents = json_decode($strJsonFileContents, true);
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation" class=""><a href="/admin/index.php">Home</a></li>
-          <li role="presentation" class="active"><a href="/admin/images.php">Images</a></li>
-          <li role="presentation" class=""><a href="/admin/change.php">Change password</a></li>
-          <li role="presentation"><a href="/admin/logout.php">Logout</a></li>
+          <li role="presentation" class=""><a href="/admin/index.php"><?php echo $db["customization"]["home"] ?></a></li>
+          <li role="presentation" class="active"><a href="/admin/images.php"><?php echo $db["customization"]["images"] ?></a></li>
+          <li role="presentation" class=""><a href="/admin/change.php"><?php echo $db["customization"]["change_password"] ?></a></li>
+          <li role="presentation"><a href="/admin/logout.php"><?php echo $db["customization"]["logout"] ?></a></li>
         </ul>
       </nav>
       <h3 class="text-muted"> <?php echo $db["customization"]["admin_title"] ?> </h3>
@@ -66,7 +66,7 @@ $contents = json_decode($strJsonFileContents, true);
         ');
       }
       ?>
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-primary"><?php echo $db["customization"]["save"] ?></button>
     </form>
 
 

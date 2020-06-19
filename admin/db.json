@@ -5,6 +5,17 @@
     },
     "customization": {
         "admin_title": "Admin_title",
-        "description": "Customize this text in db.json"
+        "description": "Customize this text in db.json",
+        "home": "Home",
+        "images": "Images",
+        "change_password": "Change password",
+        "logout": "Logout",
+        "save": "save",
+        "select_image_text": "Select the image to upload:",
+        "select_image_btn": "Upload Image!",
+        "image_not_found": "File not found. Please upload it.",
+        "show_image": "Show image.",
+        "delete": "Delete",
+        "delete_btn": "Delete selected"
     }
 }
