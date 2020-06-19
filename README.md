@@ -73,7 +73,7 @@ Example:
 
 # The db.json file
 
-In this file are stored the credentials and all the customization settings. Please **hidden this file** if you use apache the file is alredy hidden. The file is alredy very self-explanatory.
+In this file are stored the credentials and all the customization settings. Please **hide this file** if you use apache the file is alredy hidden. The file is alredy very self-explanatory.
 
 ```
 {
