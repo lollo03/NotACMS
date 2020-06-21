@@ -4,7 +4,7 @@
 # TODO
 - [x] Add the ability to change the password via the admin interface
 - [X] Add the ability to manage images
-- [ ] Add the ability to differece the webiste pages in the admin page
+- [X] Add the ability to difference the webiste pages in the admin page
 - [ ] Add the ability to manage galleries
 - [ ] Write a proper documentation
 - [ ] Add multi-language support, even if it is alredy possible (sort-off)
@@ -12,12 +12,14 @@
 # Quickstart
 Add this to the beginning of your file:
 ``` 
-$strJsonFileContents = file_get_contents("admin/contents.json") or die("Fatal error, check contents.json! It must not be empty.");
-$contents = json_decode($strJsonFileContents, true); 
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/admin/import.php';
+setPage("index");
+?>
 ```
 And this when you want to add some text:
 ```
-<?php echo $contents["body"]["text"]?>
+<?php getContent("body", $page); ?>
 ```
 of course, change the `body` to the name of the element you want to change. You can see your elements in the `contents.json` file.
 Check the repo and it will become immediately clear!
@@ -27,14 +29,16 @@ Note: all your page must be `.php`, otherwise this shit won't work
 The default login is admin:admin if you want to change the passowrd you can do it from the GUI.
 
 # Images
-Add this to the beginning of your file:
+Add this to the beginning of your file (if you didin't add it before):
 ``` 
-$strJsonFileContents = file_get_contents("admin/images.json") or die("Fatal error, check images.json! It must not be empty.");
-$images = json_decode($strJsonFileContents, true); 
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/admin/import.php';
+setPage("index");
+?>
 ```
 And this when you want to add some images:
 ```
-<img src="<?php echo $images["test_image"]?>" alt="...">
+<img src="<?php getImage("test_image") ?>" alt="...">
 ```
 of course, change the `test_images` to the name of the element you want to change. You can see your elements in the `images.json` file.
 Check the repo and it will become immediately clear!
@@ -42,31 +46,42 @@ Check the repo and it will become immediately clear!
 # The contents.json file
 ```
 {
-    "intro": {
-        "text": "Welcome to <strong>NotACMS<\/strong> the simple way to manage your custom-built site with ease.",
-        "show_name": "intro",
-        "note": "Intro text on the index.html page"
+    "index": {
+        "intro": {
+            "text": "Welcome to <strong>NotACMS<\/strong> the simple way to manage your custom-built site with ease.",
+            "show_name": "intro",
+            "note": "Intro text on the index.html page"
+        },
+        "body": {
+            "text": "Go check the documentation or log-in to the admin page to begin!",
+            "show_name": "body",
+            "note": "Body of the index.html page"
+        },
+        "title": {
+            "text": "NotACMS",
+            "show_name": "title",
+            "note": "Title of the index page"
+        }
     },
-    "body": {
-        "text": "Go check the documentation or log-in to the admin page to begin!",
-        "show_name": "body",
-        "note": "Body of the index.html page"
-    },
-    "title": {
-        "text": "NotACMS",
-        "show_name": "title",
-        "note": "Title of the index page"
+    "other_page": {
+        "example": {
+            "text": "This text belong to another page",
+            "show_name": "example",
+            "note": "An example"
+        }
     }
 }
 ```
-As you can see NotACMS offer the possibility  to give a note to each part of the website, and it can also display a different name for the customer.
+As you can see NotACMS offer the possibility  to give a note to each part of the website, and it can also display a different name for the customer. It can also difference the varius website pages.
 Example:
 ```
 {
-    "long_shitty_name_with_underscores": {
-        "text": "The actual text you want to inser in the webpage",
-        "show_name": "Cool name without underscores",
-        "note": "Cool note to ease the customer life"
+    "my-index-page": {
+        "long_shitty_name_with_underscores": {
+            "text": "The actual text you want to inser in the webpage",
+            "show_name": "Cool name without underscores",
+            "note": "Cool note to ease the customer life"
+        }
     }
 }
 ```
