@@ -7,10 +7,10 @@
 - [X] Add the ability to difference the webiste pages in the admin page
 - [ ] Add the ability to manage galleries
 - [ ] Write a proper documentation
-- [ ] Add multi-language support, even if it is alredy possible (sort-off)
+- [X] Add multi-language support, even if it is alredy possible (you can do it with pages)
 - [ ] Rewrite this thing... seriously, this thing is garbage, use just if you are lazy and you don't worry (too much) about security.
 # Quickstart
-Add this to the beginning of your file:
+Add this to the beginning of your file (replace "index" with the name of the page you choose in the contents.json file) :
 ``` 
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/admin/import.php';
