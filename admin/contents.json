@@ -1,17 +1,26 @@
 {
-    "intro": {
-        "text": "Welcome to <strong>NotACMS<\/strong> the simple way to manage your custom-built site with ease.",
-        "show_name": "intro",
-        "note": "Intro text on the index.html page"
+    "index": {
+        "intro": {
+            "text": "Welcome to <strong>NotACMS<\/strong> the simple way to manage your custom-built site with ease.",
+            "show_name": "intro",
+            "note": "Intro text on the index.html page"
+        },
+        "body": {
+            "text": "Go check the documentation or log-in to the admin page to begin!",
+            "show_name": "body",
+            "note": "Body of the index.html page"
+        },
+        "title": {
+            "text": "NotACMS",
+            "show_name": "title",
+            "note": "Title of the index page"
+        }
     },
-    "body": {
-        "text": "Go check the documentation or log-in to the admin page to begin!",
-        "show_name": "body",
-        "note": "Body of the index.html page"
-    },
-    "title": {
-        "text": "NotACMS",
-        "show_name": "title",
-        "note": "Title of the index page"
+    "other_page": {
+        "example": {
+            "text": "This text belong to another page",
+            "show_name": "example",
+            "note": "An example"
+        }
     }
 }

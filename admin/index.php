@@ -54,19 +54,24 @@ $contents = json_decode($strJsonFileContents, true);
       <p class="lead"><?php echo $db["customization"]["description"] ?></p>
     </div>
 
-    <form action="save.php" method="post">
       <?php
       foreach ($contents as $i => $i_value) {
-        echo ('
+        echo "<h2> " . $i . "</h2>";
+        echo '<form action="save.php" method="post">';
+        echo '<input type="hidden" id="page" name="_page_" value="'. $i .'">';
+        foreach ($contents[$i] as $i => $i_value) {
+          echo ('
         <div class="form-group">
           <label>' .  $i_value["show_name"] . '</label>
-          <textarea oninput="auto_grow(this)" onclick="auto_grow(this)" name="' .  $i . ' " class="form-control">' . $i_value["text"]. '</textarea>
+          <textarea oninput="auto_grow(this)" onclick="auto_grow(this)" name="' .  $i . ' " class="form-control">' . $i_value["text"] . '</textarea>
           <p class="muted">' .  $i_value["note"] . '</p>
         </div>
         ');
+        }
+        echo '<button type="submit" class="btn btn-primary"> ' . $db["customization"]["save"] . '</button> </form>';
+        echo '<hr class="my-4">';
       }
       ?>
-      <button type="submit" class="btn btn-primary"><?php echo $db["customization"]["save"] ?></button>
     </form>
 
 
