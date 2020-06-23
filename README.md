@@ -13,7 +13,7 @@
 Add this to the beginning of your file (replace "index" with the name of the page you choose in the contents.json file) :
 ``` 
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/admin/import.php';
+require __DIR__ . '/admin/import.php';
 setPage("index");
 ?>
 ```
@@ -32,7 +32,7 @@ The default login is admin:admin if you want to change the passowrd you can do i
 Add this to the beginning of your file (if you didin't add it before):
 ``` 
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/admin/import.php';
+require __DIR__ . '/admin/import.php';
 setPage("index");
 ?>
 ```
