@@ -31,10 +31,11 @@ $contents = json_decode($strJsonFileContents, true);
 <body>
   <div class="container">
     <div class="header clearfix">
-    <nav>
+      <nav>
         <ul class="nav nav-pills pull-right">
           <li role="presentation" class=""><a href="/admin/index.php"><?php echo $db["customization"]["home"] ?></a></li>
           <li role="presentation" class="active"><a href="/admin/images.php"><?php echo $db["customization"]["images"] ?></a></li>
+          <li role="presentation" class="active"><a href="/admin/components.php"><?php echo $db["customization"]["components"] ?></a></li>
           <li role="presentation" class=""><a href="/admin/change.php"><?php echo $db["customization"]["change_password"] ?></a></li>
           <li role="presentation"><a href="/admin/logout.php"><?php echo $db["customization"]["logout"] ?></a></li>
         </ul>
@@ -51,13 +52,13 @@ $contents = json_decode($strJsonFileContents, true);
       <body>
 
         <form action="upload.php" method="post" enctype="multipart/form-data">
-        <?php echo $db["customization"]["select_image_text"] ?>
+          <?php echo $db["customization"]["select_image_text"] ?>
           <input type="file" name="fileToUpload" id="fileToUpload">
           <select id="name" name="name">
-            <?php 
-              foreach ($contents as $i => $i_value) {
-                echo '<option value="' . $i .'">' . $i .'</option>';
-              }
+            <?php
+            foreach ($contents as $i => $i_value) {
+              echo '<option value="' . $i . '">' . $i . '</option>';
+            }
             ?>
           </select>
           <input type="submit" value="<?php echo $db["customization"]["select_image_btn"] ?>" name="submit">
@@ -73,14 +74,14 @@ $contents = json_decode($strJsonFileContents, true);
     <form action="delete.php" method="post">
       <?php
       foreach ($contents as $i => $i_value) {
-        if($i_value == ""){
+        if ($i_value == "") {
           $str = $db["customization"]["image_not_found"];
-        }else{
+        } else {
           $str = $db["customization"]["show_image"];
         }
         echo ('
         <div class="form-group">
-          <label>' .  $i . '</label> <a href="' . substr($i_value, 6) .'" target="_blank" >' . $str .'</a>
+          <label>' .  $i . '</label> <a href="' . substr($i_value, 6) . '" target="_blank" >' . $str . '</a>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="' . $i . '">
           <label class="form-check-label" for="defaultCheck1">

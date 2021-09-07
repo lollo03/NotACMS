@@ -16,6 +16,7 @@
         "image_not_found": "File not found. Please upload it.",
         "show_image": "Show image.",
         "delete": "Delete",
-        "delete_btn": "Delete selected"
+        "delete_btn": "Delete selected",
+        "components": "Components"
     }
 }
